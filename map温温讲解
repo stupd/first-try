@@ -1,0 +1,22 @@
+#include <stdio.h>
+struct symbol {
+char *name ;
+int type ; // 整数表示的类型信息
+union {
+int i ; //处理整数
+char ch ; //处理字符数
+float f; //处理浮点数
+} value ;
+};
+int main()
+{
+symbol sym = { "number", 101, { 122 } };
+printf("The symbol %s is:\n", sym.name);
+printf("type = %d\n", sym.type);
+printf("value in hex is: %x\t", sym.value.i);
+printf("size of sym.value is: %d\n", sizeof(sym.value));
+printf("value.i = %d\n", sym.value.i);
+printf("value.ch = '%c'\n", sym.value.ch);
+printf("value.f = %e\n", sym.value.f);
+return 0;
+}
