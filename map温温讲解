@@ -20,3 +20,4 @@ printf("value.ch = '%c'\n", sym.value.ch);
 printf("value.f = %e\n", sym.value.f);
 return 0;
 }
+//奥原来这样子修改呀
